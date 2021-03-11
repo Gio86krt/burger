@@ -1,6 +1,6 @@
-const dbConnect = require("./connection");
+const db = require("./connection");
 
-const db = dbConnect("burgers_db", "mySQL86giovanni");
+// const db = dbConnect();
 
 function selectAll() {
   const result = db.query(`SELECT * FROM burgers;`);

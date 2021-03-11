@@ -1,8 +1,4 @@
 const orm = require("../config/orm");
-// const handlebars = require("express-handlebars");
-// const express = require("express");
-// const path = require("path");
-// const { ftruncateSync } = require("node:fs");
 
 module.exports = function (app) {
   app.get("/", (req, res) => {
