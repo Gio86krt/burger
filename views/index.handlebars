@@ -3,9 +3,9 @@
         <img src="/assets/burger.jpg" alt="yummy hamburger">
     </div>
     <br>
-    <br>
     <div class="ready">
         <ul>
+
             {{#each burger_data}}
             {{#unless this.devoured}}
             <li class="item">
@@ -24,11 +24,19 @@
     <br>
     <div class="done">
         <ul>
+
             {{#each burger_data}}
             {{#if devoured}}
             {{!-- {{> burger/ready devoured=true}} --}}
             <li class="item">
-                <h4>{{this.burger_name}} <button class="devour" onclick="deleteBurger({{this.id}})">DELETE</button></h4>
+                <div class="text">
+                    <h4>{{this.burger_name}} <button class="devour" onclick="deleteBurger({{this.id}})">DELETE
+                            IT!</button>
+                    </h4>
+                </div>
+                {{!-- <div class="button">
+
+                </div> --}}
                 {{!-- <div class="btn">
                     <button class="btn delete" data-id="{{this.id}}">DEVOUR IT!</button>
                 </div> --}}
@@ -39,7 +47,7 @@
     </div>
     <br>
     <br>
-    <form method="POST" class="text">
+    <form method="POST">
         <textarea name="inputs" id="inputs" cols="40" rows="2"></textarea>
         <br>
         <br>

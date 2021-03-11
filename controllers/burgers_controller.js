@@ -20,6 +20,9 @@ module.exports = function (app) {
   app.post("/api/burgers", async (req, res) => {
     // console.log("TEST POST");
     // console.log(req.body);
+    if (req.body.inputs === "") {
+      throw new Error(`Error! Please insert a valid input!`);
+    }
     const result = await orm.insertOne(req.body.inputs);
     res.redirect(`/api/burgers`);
   });

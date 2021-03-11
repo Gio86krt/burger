@@ -21,9 +21,9 @@ img {
   font-size: 25px;
 }
 
-/* .order {
+form {
   position: relative;
-} */
+}
 
 .ready {
   position: absolute;
@@ -41,14 +41,15 @@ ul {
 
 .item {
   height: 35px;
+  min-width: 330px;
   width: fit-content;
-  min-width: 200px;
-  /* border: 0.5px solid black; */
-  font-size: 20px;
+  font-size: 25px;
+  font-family: serif;
   text-align: left;
 }
 
 .devour {
-  position: absolute;
+  float: right;
   right: 1px;
+  height: 25px;
 }

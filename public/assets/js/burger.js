@@ -5,7 +5,7 @@
 async function addBurger() {
   /////READ INPUTS HERE
   const burger_name = document.querySelector("#inputs").value;
-  if (!burger_name) return;
+  if (burger_name === "") return;
   const newBurger = await fetch("/api/burgers", {
     method: "POST",
     headers: { "content-type": "application/json" },
