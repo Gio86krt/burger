@@ -1,0 +1,54 @@
+.container {
+  position: relative;
+  text-align: center;
+}
+
+body {
+  background-color: rgb(219, 118, 3);
+}
+
+.btn {
+  height: 35px;
+}
+
+img {
+  background-color: rgb(219, 118, 3);
+  height: 350px;
+  width: auto;
+}
+
+#inputs {
+  font-size: 25px;
+}
+
+/* .order {
+  position: relative;
+} */
+
+.ready {
+  position: absolute;
+  left: 25px;
+}
+
+.done {
+  position: absolute;
+  right: 25px;
+}
+
+ul {
+  list-style: none;
+}
+
+.item {
+  height: 35px;
+  width: fit-content;
+  min-width: 200px;
+  /* border: 0.5px solid black; */
+  font-size: 20px;
+  text-align: left;
+}
+
+.devour {
+  position: absolute;
+  right: 1px;
+}

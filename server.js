@@ -7,9 +7,17 @@ const fs = require("fs");
 
 const PORT = process.env.PORT || 3000;
 const app = express();
-app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static("public"));
 app.use(express.json());
+
+app.set("view engine", "handlebars");
+
+app.engine("handlebars", handlebars({ defaultLayout: "main" }));
+
+// app.get("/", (req, res) => {
+//   res.render("main", { layout: "index" });
+// });
 
 require("./controllers/burgers_controller")(app);
 
