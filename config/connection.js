@@ -25,15 +25,34 @@ class Database {
   }
 }
 
-// at top INIT DB connection
-const db = new Database({
-  host: "localhost",
-  port: 3306,
-  user: process.env.DB_USER,
-  /*! please fill in your password; then create the database name below and create the table */
-  password: process.env.DB_PWD,
-  database: process.env.DB_NAME,
-  insecureAuth: true,
-});
+// if (process.env.JAWSDB_URL) {
+//   connection = mysql.createConnection(process.env.JAWSDB_URL);
+// } else {
+//   connection = mysql.createConnection({
+//     host: "localhost",
+//     port: 3306,
+//     user: "root",
+//     /*! please fill in your password; then create the database name below and create the table */
+//     password: "mySQL86giovanni",
+//     database: "burgers_db",
+//   });
+// }
 
-module.exports = db;
+// connection.connect();
+
+function dbConnect() {
+  // at top INIT DB connection
+  const db = new Database({
+    host: "localhost",
+    port: 3306,
+    user: process.env.DB_USE || "root",
+    /*! please fill in your password; then create the database name below and create the table */
+    password: process.env.DB_PWD,
+    database: process.env.DB_NAME,
+  });
+  return db;
+}
+
+module.exports = dbConnect;
+
+// module.exports = connection;

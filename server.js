@@ -2,6 +2,9 @@ const express = require("express");
 const mysql = require("mysql");
 const handlebars = require("express-handlebars");
 const fs = require("fs");
+const dotenv = require("dotenv");
+
+dotenv.config({ path: "./.env" });
 
 // const { writeFileSync } = require("node:fs");
 
