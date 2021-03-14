@@ -1,4 +1,4 @@
-const db = require("./connection")();
+const db = require("./connection");
 // const dbConnect = require("./connection");
 
 // const db = dbConnect("burgers_db", "mySQL86giovanni");
